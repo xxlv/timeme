@@ -1,0 +1,15 @@
+#!/usr/bin/ruby
+
+# mail  server config
+ENV['MAIL_SERVER_PORT']='25'
+ENV['MAIL_SERVER_STMP']=''
+ENV['MAIL_SERVER_DOMAIN']=''
+ENV['MAIL_SERVER_MAIL']=''
+ENV['MAIL_SERVER_MAIL_PASS']=''
+
+# recive mail addr
+ENV['MAIL_OFFICE_MAIL']=''
+
+# wunderlist
+ENV['WUNDERLIST_CLIENT_ID']=''
+ENV['WUNDERLIST_ACCESS_TOKEN']=''
