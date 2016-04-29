@@ -88,6 +88,7 @@ class Url < ActiveRecord::Base
   # t.integer "last_visit_time",                               :null => false
   # t.integer "hidden",                         :default => 0, :null => false
   # t.integer "favicon_id",                     :default => 0, :null => false
+  attr_accessor :today_visit_count
   timestamp_accessors :last_visit_time
   has_many :visits, :foreign_key => "url"
 end
@@ -114,7 +115,7 @@ class ChromeSpy
   class <<self
 
     def to_chrome(time)
-      return (time.to_i * 10000000 )+116444736000000000
+      return ((time.to_i * 10000000 )+116444736000000000)/10
     end
 
     def recent_searches

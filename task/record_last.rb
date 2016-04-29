@@ -2,6 +2,7 @@
 require 'date'
 
 def record_last
+
     last= `last | grep #{ENV['USER']} `.split("\n")
 
     today_login_record=[]
